@@ -14,13 +14,16 @@ import {
   Router,
   Scene
 } from 'react-native-router-flux';
+import { NavigationDrawer } from './NavigationDrawer'
+import { Launch } from './Launch'
 
 export default class MasterShip extends Component {
   render() {
     return (
       <Router>
         <Scene key="root">
-          <Scene key="slide_menu" component={NavigationDrawer} initial />
+          <Scene key="pageOne" component={Launch} title="PageOne" initial={true} />
+          <Scene key="pageTwo" component={Launch} title="PageTwo" />
         </Scene>
       </Router>
 
